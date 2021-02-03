@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+    font-family: 'Helvetica', sans-serif;
+  }
+
+.RootContainer_Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.RootContainer_Content {
+  width: 100%;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+.RootContainer_Footer{
+    flex: 0 0 auto;
+}

@@ -1,0 +1,58 @@
+@import "../../../style/colors.scss";
+@import "../../../style/typo.scss";
+@import "../../../style/adaptiv.scss";
+
+.Partial{
+    &__Info {
+        display: flex;
+        @include info;
+        margin-bottom: 20px;
+        &Box {
+          margin-right: 20px;
+          margin-left: 20px;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: -2px;
+            left: -20px;
+            width: 12px;
+            height: 14px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        &Box + &Box {
+          margin-left: 20px;
+        }
+      }
+
+      &__Author {
+        &::before {
+          background-image: url("../../../images/icons/user-regular.svg");
+        }
+      }
+    
+      &__Comments {
+        &::before {
+          background-image: url("../../../images/icons/comments-regular.svg");
+        }
+      }
+    
+      &__Date {
+        &::before {
+          background-image: url("../../../images/icons/clock-regular.svg");
+        }
+      }
+
+      &__Content {
+        @include content;
+        margin-bottom: 10px;
+      }
+
+      &__Gallery{
+          max-width: 100%;
+          padding: 20px;
+      }
+}

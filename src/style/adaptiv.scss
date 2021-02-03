@@ -1,0 +1,51 @@
+
+
+@mixin desktop {
+    @media (max-width: 1240px){
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 760px){
+        @content;
+    }
+}
+
+@mixin tablet-small {
+    @media (max-width: 670px){
+        @content;
+    }
+}
+
+@mixin adaptive {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    @include desktop {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop-small {
+      max-width: 700px;
+    }
+  
+    @include tablet {
+      width: 100%;
+      margin-top: 5px;
+      padding: 15px 20px 0;
+    }
+  
+    @include tablet-small{
+      padding: 0 15px;
+    }
+}

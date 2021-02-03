@@ -1,0 +1,20 @@
+@import "../style/adaptiv.scss";
+
+.Label{
+    max-width: 1200px;
+    margin: 30px auto;
+    @include desktop{
+        max-width: 1000px;
+    }
+    @include desktop-small{
+        max-width: 700px;
+        margin: 20px auto;
+    }
+    @include tablet {
+        width: 100%;
+        padding: 0px 20px ;
+    }
+    @include tablet-small{
+        margin: 10px auto;
+    }
+}

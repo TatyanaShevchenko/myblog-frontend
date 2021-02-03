@@ -1,0 +1,15 @@
+@import "../../../style/colors.scss";
+@import "../../../style/typo.scss";
+@import "../../../style/adaptiv.scss";
+
+.SinglePost{
+  @include adaptive;
+    &__Container{
+
+    }
+    &__Title{
+        transition: all 0.5s;
+        @include title;
+    }
+
+}

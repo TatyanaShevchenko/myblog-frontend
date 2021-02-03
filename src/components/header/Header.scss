@@ -1,0 +1,14 @@
+@import "../../style/colors.scss";
+@import "../../style/adaptiv.scss";
+
+.active{
+    padding: 7px;
+    color: #fff !important;
+    background-color: $bittersweet !important;
+    @include tablet-small{
+        padding: 0px;
+        background-color: transparent !important;
+        color:$bittersweet !important;
+    }
+}
+

@@ -1,0 +1,59 @@
+@import "../../../style/colors.scss";
+@import "../../../style/typo.scss";
+@import "../../../style/adaptiv.scss";
+
+.Labels{
+    &_Title{
+        background-color: $text;
+        padding: 3px 15px;
+        @include title;
+        color: #fff;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        box-shadow: -5px 6px 0 $light-grey;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+    
+        &::before {
+          content: "";
+          border-color: $bittersweet transparent transparent;
+          border-width: 22px;
+          border-style: solid;
+          position: absolute;
+          left: -22px;
+          top: -3px;
+        }
+    }
+
+    &_Wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__Label{
+        background-color: $coral;
+        @include content;
+        line-height: 18px;
+        color: #fff;
+        padding: 5px 8px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        transition: all .3s;
+        &:hover{
+            background-color: $bittersweet;
+        }
+        &:active{
+            background-color: $fire;
+        }
+    }
+    @include desktop {
+        margin-bottom: 10px;
+    }
+
+    @include tablet {
+        &_Title{
+            @include label-title;
+        }
+    }
+}

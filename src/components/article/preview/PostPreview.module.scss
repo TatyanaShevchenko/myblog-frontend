@@ -1,0 +1,70 @@
+@import "../../../style/colors.scss";
+@import "../../../style/typo.scss";
+
+.PostPreview {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  &__Image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+  }
+  &__Likes {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &Reg {
+      transition: all 0.5s;
+      color: $tangerine;
+      &:hover {
+        color: $fire;
+      }
+    }
+    &Solid {
+      transition: all 0.5s;
+      color: $fire;
+      &:hover {
+        color: $light-grey;
+      }
+    }
+  }
+  &__LikesNumber {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: $text;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  &__Title {
+    cursor: pointer;
+    transition: all 0.5s;
+    text-decoration: none;
+    @include title;
+  }
+
+
+
+  &__LoadMore {
+    cursor: pointer;
+    transition: all 0.5s;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: $tangerine;
+    &:hover {
+      color: $bittersweet;
+    }
+    &:active {
+      color: $fire;
+    }
+  }
+}

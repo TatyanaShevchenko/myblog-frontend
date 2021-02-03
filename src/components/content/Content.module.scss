@@ -1,0 +1,15 @@
+@import "../../style/adaptiv.scss";
+
+.Content {
+  @include adaptive;
+  @include desktop {
+    flex-direction: column-reverse;
+  }
+}
+
+.Content__Section {
+  max-width: 800px;
+  @include desktop {
+    max-width: 1000px;
+  }
+}
