@@ -22,7 +22,6 @@ const SinglePost = ({ singlePost }) => {
               <PostInfo
                 author={post.info_author}
                 date={post.info_date}
-                label={post.info_label}
                 comments={comments}
               />
             );

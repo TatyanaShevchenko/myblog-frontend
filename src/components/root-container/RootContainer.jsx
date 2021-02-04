@@ -3,7 +3,6 @@ import { connect, useStore } from "react-redux";
 import { getPosts } from "../../redux/actions";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useParams } from "react-router";
 
 import Header from "../header/Header";
 import Content from "../content/Content";

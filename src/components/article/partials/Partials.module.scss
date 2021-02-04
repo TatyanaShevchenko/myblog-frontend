@@ -2,57 +2,91 @@
 @import "../../../style/typo.scss";
 @import "../../../style/adaptiv.scss";
 
-.Partial{
-    &__Info {
-        display: flex;
-        @include info;
-        margin-bottom: 20px;
-        &Box {
-          margin-right: 20px;
-          margin-left: 20px;
-          position: relative;
-          &::before {
-            position: absolute;
-            content: "";
-            top: -2px;
-            left: -20px;
-            width: 12px;
-            height: 14px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-        }
-        &Box + &Box {
-          margin-left: 20px;
-        }
+.Partial {
+  &__Info {
+    display: flex;
+    @include info;
+    margin-bottom: 20px;
+    &Box {
+      margin-right: 20px;
+      margin-left: 20px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -2px;
+        left: -20px;
+        width: 12px;
+        height: 14px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
+    }
+    &Box + &Box {
+      margin-left: 20px;
+    }
+  }
 
-      &__Author {
-        &::before {
-          background-image: url("../../../images/icons/user-regular.svg");
-        }
-      }
-    
-      &__Comments {
-        &::before {
-          background-image: url("../../../images/icons/comments-regular.svg");
-        }
-      }
-    
-      &__Date {
-        &::before {
-          background-image: url("../../../images/icons/clock-regular.svg");
-        }
-      }
+  &__Author {
+    &::before {
+      background-image: url("../../../images/icons/user-regular.svg");
+    }
+  }
 
-      &__Content {
-        @include content;
-        margin-bottom: 10px;
-      }
+  &__Comments {
+    &::before {
+      background-image: url("../../../images/icons/comments-regular.svg");
+    }
+  }
 
-      &__Gallery{
-          max-width: 100%;
-          padding: 20px;
-      }
+  &__Date {
+    &::before {
+      background-image: url("../../../images/icons/clock-regular.svg");
+    }
+  }
+
+  &__Content {
+    @include content;
+    margin-bottom: 10px;
+  }
+
+  &__Gallery {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  &__PostImage {
+    max-width: inherit;
+  }
+
+  &__Image {
+    max-width: -webkit-fill-available;
+  }
+
+  &__Credits {
+    @include info;
+    margin-bottom: 50px;
+  }
+  &__PostVideoContainer {
+    width: 1000px;
+    margin: 30px auto;
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__PostVideo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  &__Iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
